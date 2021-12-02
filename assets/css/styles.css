@@ -1,0 +1,49 @@
+* {
+	box-sizing: border-box;
+}
+html, body {
+	font-family: "Google Sans Text";
+}
+
+.product-info {
+    margin: 20px 10px;
+    margin-top: 30px;
+}
+
+.wc-octa-product-main-image {
+    width: 100%;
+}
+
+div#wc-octa-product-colors-group .btn {
+	border-radius: 30px;
+	border: 3px solid transparent;
+	width: 36px;
+	height: 36px;
+	margin: 0 5px
+}
+#wc-octa-product-sizes-group .btn {
+	border: 1px solid #ddd;
+	margin: 5px;
+	color: #666;
+}
+
+span.wc-octa-product-price {
+	margin: 20px;
+}
+
+div#wc-octa-product-colors-group, div#wc-octa-product-sizes-group {
+	margin: 15px 10px;
+}
+
+div#wc-octa-product-colors-group .btn.active {
+	border-color: #666;
+}
+
+#wc-octa-product-sizes-group .btn.active {
+    color: #a900ff;
+    border-color: #a900ff;
+}
+.wc-octa-product-main-image-container {
+    border: 1px solid #ddd;
+    border-radius: 2px;   
+}
