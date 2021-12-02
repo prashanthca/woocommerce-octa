@@ -1,3 +1,5 @@
+// Render function called from the main page. This sets up constraints for each of the type of values ('color', 'size', etc.)
+// It also sets up click handlers for each of the buttons
 function wc_octa_render_product(id, data) {
 	$(id).data("variations", data.variations);
 	Object.keys(data.variations).forEach(function(e) {
@@ -11,6 +13,7 @@ function wc_octa_render_product(id, data) {
 	});
 }
 
+// Setup constraints by listening to the change event on each of the product attribute value
 function wc_octa_setup_constraints(element, selector, id) {
 	var variations = $(id).data("variations");
 	element.on("change", function(){

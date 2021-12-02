@@ -44,10 +44,12 @@ if(!is_a($product,'WC_Product')){
 					</div>
 					<div class="col-md-6">
 						<?php
+							//Get all product variations and reduce each item in the arry to bare essentials
 							$available_variations = array_map(function ($val) {
 								return array("id"=>$val["variation_id"], "image" => $val["image"]["url"], "is_in_stock" => $val["is_in_stock"], "color" => $val["attributes"]["attribute_color"], "size" => $val["attributes"]["attribute_size"], "price_html" => $val["price_html"], "hexcolor" => $val["custom_color"]);
 							}, $product->get_available_variations("array"));
 							$variations_data = array("variations" => array());
+							// Restructure the variations data to suit our needs
 							foreach($product->get_attributes() as $key => $value) {
 								$variations_data["variations"][$key] = array();
 								foreach($value->get_options() as $option) {
@@ -96,6 +98,7 @@ if(!is_a($product,'WC_Product')){
 			<script type="text/javascript">
 				(function($){
 					var <? echo $product_id; ?>_data = <?echo json_encode($variations_data); ?>;
+					//Render our product data and setup click handlers
 					wc_octa_render_product("#<? echo $product_id; ?>", <? echo $product_id; ?>_data);
 				})(jQuery);
 			</script>
