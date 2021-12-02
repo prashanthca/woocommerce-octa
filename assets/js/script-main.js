@@ -37,7 +37,7 @@ function wc_octa_setup_constraints(element, selector, id) {
 				if(typeof(selected) != "undefined") {
 					$(".wc-octa-product .wc-octa-product-main-image").attr("src", selected.image);
 					$(".wc-octa-product .wc-octa-product-price").html(selected.price_html);
-					wc_octa_update_constraints("size", id, variations[selector][value]);
+					wc_octa_update_constraints("color", id, variations[selector][value]);
 				}
 				else {
 					wc_octa_reset_constraints("color", id, variations[selector][value]);
