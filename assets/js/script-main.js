@@ -59,7 +59,7 @@ function wc_octa_reset_constraints(selector, id, variations) {
 			$(this).addClass("disabled");
 		}
 	});
-	$(id+" #wc-octa-product-"+selector+"s-group label:not('disabled'):eq(0)").trigger("click");
+	$(id+" #wc-octa-product-"+selector+"s-group label:not('.disabled'):eq(0)").trigger("click");
 }
 function wc_octa_update_constraints(selector, id, variations) {
 	$(id+" #wc-octa-product-"+selector+"s-group label").removeClass("disabled");
